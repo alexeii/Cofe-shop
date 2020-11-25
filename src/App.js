@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Main } from "./components/main/main"
+import {CoffePage} from './components/coffePage/coffePage';
+import {Pleasure} from './components/forYourPleasure/pleasure';
+import {Switch, Route} from 'react-router-dom';
+import './sass/style.sass';
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Switch>
+      <Route exact path='/' component={Main}/>
+      <Route path='/coffepage' component={CoffePage}/>
+      <Route path='/pleasure' component={Pleasure}/>
+    </Switch>
     </div>
   );
 }
 
-export default App;

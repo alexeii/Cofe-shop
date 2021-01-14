@@ -41,7 +41,10 @@ export const CoffePage = () => {
                 )
             );
     },[items,search, filterItem]);
-    
+    /* console.log(search);
+    console.log(items.filter((item) => 
+                    item.name.toLowerCase().trim().includes('')
+                )); */
     return (
         <>
             <div className="banner" >
